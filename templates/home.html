@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "ApplyHelp - Supporting Kurdish Students Study Abroad" %}{% endblock %}
+
+{% block main_class %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">
+                    {% trans "Your Journey to Higher Education Starts Here" %}
+                </h1>
+                <p class="lead mb-4">
+                    {% trans "Supporting Kurdish students from all regions (Rojhelat, Başûr, Bakûr, and Rojava) to pursue MSc and PhD programs in Europe, Canada, USA, Australia, and New Zealand." %}
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="{% url 'accounts:register' %}" class="btn btn-light btn-lg">
+                        <i class="fas fa-user-plus"></i> {% trans "Get Started" %}
+                    </a>
+                    <a href="{% url 'destinations:quiz' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-compass"></i> {% trans "Find Your Destination" %}
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="hero-flags mt-4 mt-lg-0">
+                    <!-- Kurdish regions representation -->
+                    <div class="region-cards">
+                        <div class="card bg-transparent text-white border-light">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">{% trans "All Kurdish Regions" %}</h6>
+                                <div class="regions-list">
+                                    <small>Rojhelat • Başûr • Bakûr • Rojava</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="fw-bold">{% trans "Everything You Need to Apply Successfully" %}</h2>
+                <p class="text-muted">{% trans "Comprehensive tools and resources designed specifically for Kurdish students" %}</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Destination Selection -->
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon bg-primary bg-opacity-10 rounded-circle p-3 mb-3 mx-auto">
+                            <i class="fas fa-globe fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">{% trans "Destination Selection" %}</h5>
+                        <p class="card-text text-muted">{% trans "Smart matching system to find the perfect country and university based on your background and goals." %}</p>
+                        <a href="{% url 'destinations:list' %}" class="btn btn-outline-primary">{% trans "Explore Destinations" %}</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resume Builder -->
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon bg-success bg-opacity-10 rounded-circle p-3 mb-3 mx-auto">
+                            <i class="fas fa-file-alt fa-2x text-success"></i>
+                        </div>
+                        <h5 class="card-title">{% trans "Resume Builder" %}</h5>
+                        <p class="card-text text-muted">{% trans "Create professional CVs adapted to different country standards with Kurdish context consideration." %}</p>
+                        <a href="{% url 'resume_builder:list' %}" class="btn btn-outline-success">{% trans "Build Resume" %}</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Communication Tools -->
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon bg-info bg-opacity-10 rounded-circle p-3 mb-3 mx-auto">
+                            <i class="fas fa-envelope fa-2x text-info"></i>
+                        </div>
+                        <h5 class="card-title">{% trans "Email Templates" %}</h5>
+                        <p class="card-text text-muted">{% trans "Professional email templates for contacting supervisors, universities, and handling applications." %}</p>
+                        <a href="{% url 'communications:templates' %}" class="btn btn-outline-info">{% trans "View Templates" %}</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resources & Guides -->
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="feature-icon bg-warning bg-opacity-10 rounded-circle p-3 mb-3 mx-auto">
+                            <i class="fas fa-book fa-2x text-warning"></i>
+                        </div>
+                        <h5 class="card-title">{% trans "Guides & Resources" %}</h5>
+                        <p class="card-text text-muted">{% trans "Comprehensive guides covering visa processes, cultural adaptation, and country-specific information." %}</p>
+                        <a href="{% url 'resources:guides' %}" class="btn btn-outline-warning">{% trans "Browse Guides" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats-section bg-light py-5">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold text-primary mb-1">{{ featured_content.countries_count|default:"50+" }}</h3>
+                    <p class="text-muted mb-0">{% trans "Countries Covered" %}</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold text-success mb-1">{{ featured_content.universities_count|default:"1000+" }}</h3>
+                    <p class="text-muted mb-0">{% trans "Universities Listed" %}</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold text-info mb-1">{{ featured_content.success_stories_count|default:"200+" }}</h3>
+                    <p class="text-muted mb-0">{% trans "Success Stories" %}</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold text-warning mb-1">{{ featured_content.guides_count|default:"100+" }}</h3>
+                    <p class="text-muted mb-0">{% trans "Helpful Guides" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Regional Support Section -->
+<section class="regional-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">{% trans "Supporting All Kurdish Regions" %}</h2>
+                <p class="text-muted mb-4">
+                    {% trans "We understand the unique challenges faced by Kurdish students from different regions and provide tailored support for each context." %}
+                </p>
+                
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="region-item d-flex align-items-center">
+                            <div class="region-icon bg-primary bg-opacity-10 rounded p-2 me-3">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{% trans "Rojhelat" %}</h6>
+                                <small class="text-muted">{% trans "Eastern Kurdistan" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="region-item d-flex align-items-center">
+                            <div class="region-icon bg-success bg-opacity-10 rounded p-2 me-3">
+                                <i class="fas fa-map-marker-alt text-success"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{% trans "Başûr" %}</h6>
+                                <small class="text-muted">{% trans "Southern Kurdistan" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="region-item d-flex align-items-center">
+                            <div class="region-icon bg-info bg-opacity-10 rounded p-2 me-3">
+                                <i class="fas fa-map-marker-alt text-info"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{% trans "Bakûr" %}</h6>
+                                <small class="text-muted">{% trans "Northern Kurdistan" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="region-item d-flex align-items-center">
+                            <div class="region-icon bg-warning bg-opacity-10 rounded p-2 me-3">
+                                <i class="fas fa-map-marker-alt text-warning"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{% trans "Rojava" %}</h6>
+                                <small class="text-muted">{% trans "Western Kurdistan" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="regional-support-card card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Tailored Support" %}</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Region-specific document requirements" %}</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Grade conversion systems" %}</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Language requirement guidance" %}</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Cultural context consideration" %}</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Visa process specific help" %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section bg-primary text-white py-5">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="fw-bold mb-4">{% trans "Ready to Start Your Journey?" %}</h2>
+                <p class="lead mb-4">
+                    {% trans "Join thousands of Kurdish students who have successfully pursued their dreams of higher education abroad." %}
+                </p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    {% if not user.is_authenticated %}
+                        <a href="{% url 'accounts:register' %}" class="btn btn-light btn-lg">
+                            <i class="fas fa-user-plus"></i> {% trans "Create Free Account" %}
+                        </a>
+                    {% else %}
+                        <a href="{% url 'accounts:dashboard' %}" class="btn btn-light btn-lg">
+                            <i class="fas fa-tachometer-alt"></i> {% trans "Go to Dashboard" %}
+                        </a>
+                    {% endif %}
+                    <a href="{% url 'destinations:quiz' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-play"></i> {% trans "Take Destination Quiz" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+    }
+    
+    .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    }
+    
+    .feature-icon {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+    
+    .region-item {
+        padding: 0.5rem 0;
+    }
+    
+    .regional-support-card {
+        border: none;
+    }
+    
+    .regions-list {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+</style>
+{% endblock %}
