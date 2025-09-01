@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "My Resumes" %} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h1 class="display-6 fw-bold text-primary mb-2">
+                {% trans "My Resumes" %}
+            </h1>
+            <p class="text-muted">
+                {% trans "Create and manage your professional resumes for different applications and countries." %}
+            </p>
+        </div>
+        <div class="col-md-4 text-end">
+            <a href="{% url 'resume_builder:create' %}" class="btn btn-primary btn-lg">
+                <i class="fas fa-plus"></i> {% trans "Create New Resume" %}
+            </a>
+        </div>
+    </div>
+
+    <!-- Resume List -->
+    {% if resumes %}
+        <div class="row g-4">
+            {% for resume in resumes %}
+            <div class="col-lg-4 col-md-6">
+                <div class="resume-card card h-100 shadow-sm">
+                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                        <div class="resume-status">
+                            {% if resume.is_primary %}
+                                <span class="badge bg-success">
+                                    <i class="fas fa-star"></i> {% trans "Primary" %}
+                                </span>
+                            {% endif %}
+                        </div>
+                        <div class="resume-actions dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'resume_builder:detail' resume.pk %}">
+                                        <i class="fas fa-eye"></i> {% trans "View" %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'resume_builder:edit' resume.pk %}">
+                                        <i class="fas fa-edit"></i> {% trans "Edit" %}
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'resume_builder:download_pdf' resume.pk %}">
+                                        <i class="fas fa-file-pdf text-danger"></i> {% trans "Download PDF" %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'resume_builder:download_doc' resume.pk %}">
+                                        <i class="fas fa-file-word text-primary"></i> {% trans "Download DOC" %}
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="{% url 'resume_builder:delete' resume.pk %}">
+                                        <i class="fas fa-trash"></i> {% trans "Delete" %}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">{{ resume.title }}</h5>
+                        
+                        <div class="resume-info mb-3">
+                            {% if resume.target_country %}
+                                <div class="info-item d-flex align-items-center mb-2">
+                                    <i class="fas fa-globe text-primary me-2"></i>
+                                    <span class="small text-muted">
+                                        {% trans "Target Country" %}: <strong>{{ resume.target_country }}</strong>
+                                    </span>
+                                </div>
+                            {% endif %}
+                            
+                            {% if resume.target_field %}
+                                <div class="info-item d-flex align-items-center mb-2">
+                                    <i class="fas fa-graduation-cap text-success me-2"></i>
+                                    <span class="small text-muted">
+                                        {% trans "Field" %}: <strong>{{ resume.target_field }}</strong>
+                                    </span>
+                                </div>
+                            {% endif %}
+                            
+                            {% if resume.template %}
+                                <div class="info-item d-flex align-items-center mb-2">
+                                    <i class="fas fa-file-alt text-info me-2"></i>
+                                    <span class="small text-muted">
+                                        {% trans "Template" %}: <strong>{{ resume.template.name }}</strong>
+                                    </span>
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <!-- Resume Stats -->
+                        <div class="resume-stats">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h6 class="text-primary mb-1">{{ resume.education.count }}</h6>
+                                        <small class="text-muted">{% trans "Education" %}</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h6 class="text-success mb-1">{{ resume.experience.count }}</h6>
+                                        <small class="text-muted">{% trans "Experience" %}</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h6 class="text-info mb-1">{{ resume.skills.count }}</h6>
+                                        <small class="text-muted">{% trans "Skills" %}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Last Updated -->
+                        <div class="last-updated mt-3 pt-3 border-top">
+                            <small class="text-muted">
+                                <i class="fas fa-clock"></i>
+                                {% trans "Updated" %} {{ resume.updated_at|timesince }} {% trans "ago" %}
+                            </small>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer bg-white border-0">
+                        <div class="d-grid gap-2">
+                            <a href="{% url 'resume_builder:detail' resume.pk %}" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> {% trans "View Resume" %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Pagination -->
+        {% if is_paginated %}
+        <div class="row mt-5">
+            <div class="col-12">
+                <nav aria-label="{% trans 'Resumes pagination' %}">
+                    <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                                    <i class="fas fa-chevron-left"></i> {% trans "Previous" %}
+                                </a>
+                            </li>
+                        {% endif %}
+                        
+                        <li class="page-item active">
+                            <span class="page-link">{{ page_obj.number }} {% trans "of" %} {{ page_obj.paginator.num_pages }}</span>
+                        </li>
+                        
+                        {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                                    {% trans "Next" %} <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        {% endif %}
+        
+    {% else %}
+        <!-- Empty State -->
+        <div class="row">
+            <div class="col-12">
+                <div class="empty-state text-center py-5">
+                    <div class="empty-icon mb-4">
+                        <i class="fas fa-file-alt fa-5x text-muted opacity-50"></i>
+                    </div>
+                    <h3 class="text-muted mb-3">{% trans "No resumes yet" %}</h3>
+                    <p class="text-muted mb-4">
+                        {% trans "Create your first professional resume to get started with your applications." %}
+                    </p>
+                    <div class="empty-actions">
+                        <a href="{% url 'resume_builder:create' %}" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-plus"></i> {% trans "Create Your First Resume" %}
+                        </a>
+                        <a href="{% url 'resume_builder:templates' %}" class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-eye"></i> {% trans "Browse Templates" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Tips Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="tips-section card bg-light border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <i class="fas fa-lightbulb text-warning"></i>
+                        {% trans "Resume Tips for Kurdish Students" %}
+                    </h5>
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="tip-item text-center">
+                                <div class="tip-icon bg-primary bg-opacity-10 rounded-circle p-3 mb-3 mx-auto">
+                                    <i class="fas fa-globe fa-2x text-primary"></i>
+                                </div>
+                                <h6>{% trans "Country-Specific Formats" %}</h6>
+                                <p class="small text-muted">
+                                    {% trans "Use different resume formats for different countries. US resumes differ from European CVs." %}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="tip-item text-center">
+                                <div class="tip-icon bg-success bg-opacity-10 rounded-circle p-3 mb-3 mx-auto">
+                                    <i class="fas fa-language fa-2x text-success"></i>
+                                </div>
+                                <h6>{% trans "Name Presentation" %}</h6>
+                                <p class="small text-muted">
+                                    {% trans "Include both your Kurdish name and the Latin alphabet version for international applications." %}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="tip-item text-center">
+                                <div class="tip-icon bg-info bg-opacity-10 rounded-circle p-3 mb-3 mx-auto">
+                                    <i class="fas fa-star fa-2x text-info"></i>
+                                </div>
+                                <h6>{% trans "Highlight Uniqueness" %}</h6>
+                                <p class="small text-muted">
+                                    {% trans "Emphasize your multicultural background and language skills as valuable assets." %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .resume-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+    }
+    
+    .resume-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .resume-actions .dropdown-toggle {
+        border: none;
+        background: transparent;
+    }
+    
+    .resume-actions .dropdown-toggle:focus {
+        box-shadow: none;
+    }
+    
+    .resume-stats .stat-item {
+        padding: 0.5rem 0;
+    }
+    
+    .info-item {
+        font-size: 0.875rem;
+    }
+    
+    .last-updated {
+        font-size: 0.8rem;
+    }
+    
+    .empty-state {
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .empty-icon {
+        opacity: 0.3;
+    }
+    
+    .tips-section {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff) !important;
+    }
+    
+    .tip-icon {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .tip-item h6 {
+        color: #495057;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Badge styling */
+    .badge {
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+    
+    /* Dropdown menu styling */
+    .dropdown-menu {
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .dropdown-item i {
+        width: 1.2rem;
+        margin-right: 0.5rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .tip-icon {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .tip-icon i {
+            font-size: 1.5rem !important;
+        }
+        
+        .empty-actions .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+        
+        .empty-actions .btn:last-child {
+            margin-bottom: 0;
+        }
+    }
+</style>
+{% endblock %}

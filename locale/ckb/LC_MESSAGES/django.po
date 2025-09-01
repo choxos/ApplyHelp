@@ -1,0 +1,2133 @@
+# Kurdish Sorani (Central Kurdish) Translation for ApplyHelp
+# Copyright (C) 2025 ApplyHelp
+# This file is distributed under the same license as the ApplyHelp package.
+# Kurdish Translation Team <translate@applyhelp.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ApplyHelp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-31 23:56+0000\n"
+"PO-Revision-Date: 2025-08-31 23:56+0000\n"
+"Last-Translator: ApplyHelp Team <translate@applyhelp.org>\n"
+"Language-Team: Kurdish Sorani <ckb@applyhelp.org>\n"
+"Language: ckb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: accounts/forms.py:12 resume_builder/models.py:64
+msgid "Email"
+msgstr "ئیمەیل"
+
+#: accounts/forms.py:13 accounts/models.py:34 resume_builder/models.py:63
+msgid "Kurdish Name"
+msgstr "ناوی کوردی"
+
+#: accounts/forms.py:14 accounts/models.py:35
+msgid "Kurdish Region"
+msgstr "هەرێمی کوردی"
+
+#: accounts/forms.py:15 accounts/models.py:41 destinations/models.py:129
+#: resume_builder/models.py:108
+msgid "Field of Study"
+msgstr "بواری خوێندن"
+
+#: accounts/forms.py:18 accounts/models.py:39
+msgid "Current Education Level"
+msgstr "ئاستی خوێندنی ئێستا"
+
+#: accounts/forms.py:22 accounts/models.py:50
+msgid "Preferred Study Level"
+msgstr "ئاستی خوێندنی دڵخواز"
+
+#: accounts/forms.py:42 accounts/forms.py:151
+#: templates/accounts/dashboard.html:155
+msgid "Basic Information"
+msgstr "زانیاری بنەڕەتی"
+
+#: accounts/forms.py:57
+msgid "Regional & Academic Information"
+msgstr "زانیاری هەرێمی و ئەکادیمی"
+#: accounts/forms.py:67 accounts/forms.py:161
+#: templates/accounts/dashboard.html:175
+msgid "Contact Information"
+msgstr "زانیاری پەیوەندیکردن"
+#: accounts/forms.py:74 templates/accounts/login.html:96
+#: templates/accounts/register.html:6
+msgid "Create Account"
+msgstr "هەژماری دروست بکە"
+#: accounts/forms.py:107
+msgid "Personal Information"
+msgstr ""
+
+#: accounts/forms.py:111 accounts/forms.py:168
+msgid "Academic Information"
+msgstr "زانیاری ئەکادیمی"
+#: accounts/forms.py:118 resume_builder/models.py:171
+#: resume_builder/models.py:172
+msgid "Experience"
+msgstr "ئەزموون"
+#: accounts/forms.py:122 resume_builder/models.py:213
+msgid "Skills"
+msgstr "لێهاتووی"
+#: accounts/forms.py:128
+msgid "Documents"
+msgstr ""
+
+#: accounts/forms.py:135
+msgid "Update Profile"
+msgstr ""
+
+#: accounts/forms.py:177
+msgid "Update Information"
+msgstr ""
+
+#: accounts/models.py:11 destinations/views.py:250
+#: templates/accounts/login.html:110 templates/accounts/register.html:60
+#: templates/base.html:158 templates/home.html:168
+msgid "Rojhelat"
+msgstr "ڕۆژهەڵات"
+#: accounts/models.py:12 destinations/views.py:251
+#: templates/accounts/login.html:110 templates/accounts/register.html:65
+#: templates/base.html:159 templates/home.html:180
+msgid "Başûr"
+msgstr "باشوور"
+#: accounts/models.py:13 destinations/views.py:252
+#: templates/accounts/login.html:110 templates/accounts/register.html:70
+#: templates/base.html:160 templates/home.html:192
+msgid "Bakûr"
+msgstr "باکوور"
+#: accounts/models.py:14 destinations/views.py:253
+#: templates/accounts/login.html:110 templates/accounts/register.html:75
+#: templates/base.html:161 templates/home.html:204
+msgid "Rojava"
+msgstr "ڕۆژئاوا"
+#: accounts/models.py:15 destinations/views.py:254
+msgid "Diaspora"
+msgstr "دەرەوەی وڵات"
+#: accounts/models.py:19 destinations/models.py:117 destinations/views.py:230
+#: resume_builder/models.py:97
+msgid "Bachelor's Degree"
+msgstr "بەکالۆریۆس"
+#: accounts/models.py:20 destinations/models.py:118 destinations/views.py:231
+#: destinations/views.py:238 resume_builder/models.py:98
+msgid "Master's Degree"
+msgstr "ماستەر"
+#: accounts/models.py:21 destinations/models.py:119 destinations/views.py:232
+#: destinations/views.py:239 resume_builder/models.py:99
+msgid "PhD"
+msgstr "دکتۆرا"
+#: accounts/models.py:22
+msgid "Professional Degree"
+msgstr "بڕوانامەی پیشەیی"
+#: accounts/models.py:26
+msgid "Sorani (Central Kurdish)"
+msgstr ""
+
+#: accounts/models.py:27
+msgid "Kurmanji (Northern Kurdish)"
+msgstr ""
+
+#: accounts/models.py:28
+msgid "Pehlewani (Southern Kurdish)"
+msgstr ""
+
+#: accounts/models.py:29
+msgid "Zazaki (Dimli)"
+msgstr ""
+
+#: accounts/models.py:30
+msgid "Gorani (Hawrami)"
+msgstr ""
+
+#: accounts/models.py:36
+msgid "Kurdish Dialects Spoken"
+msgstr ""
+
+#: accounts/models.py:40
+msgid "Current/Previous University"
+msgstr ""
+
+#: accounts/models.py:42
+msgid "Graduation Year"
+msgstr "ساڵی دەرچوون"
+#: accounts/models.py:45
+msgid "Phone Number"
+msgstr "ژمارەی تەلەفۆن"
+#: accounts/models.py:46
+msgid "Current City"
+msgstr ""
+
+#: accounts/models.py:47
+msgid "Current Country"
+msgstr ""
+
+#: accounts/models.py:51
+msgid "Research Interests"
+msgstr "بەرژەوەندیەکانی تویژینەوە"
+#: accounts/models.py:54
+msgid "Profile Completed"
+msgstr ""
+
+#: accounts/models.py:62
+msgid "Kurdish User"
+msgstr ""
+
+#: accounts/models.py:63
+msgid "Kurdish Users"
+msgstr ""
+
+#: accounts/models.py:70 destinations/models.py:10 resources/models.py:12
+msgid "Name (Sorani)"
+msgstr ""
+
+#: accounts/models.py:71 destinations/models.py:11 resources/models.py:13
+msgid "Name (Kurmanji)"
+msgstr ""
+
+#: accounts/models.py:72
+msgid "Name (English)"
+msgstr ""
+
+#: accounts/models.py:73
+msgid "Language Code"
+msgstr ""
+
+#: accounts/models.py:79
+msgid "Kurdish Dialect"
+msgstr ""
+
+#: accounts/models.py:80
+msgid "Kurdish Dialects"
+msgstr ""
+
+#: accounts/models.py:90
+msgid "Biography"
+msgstr "ژیاننامە"
+#: accounts/models.py:91
+msgid "General Motivation Letter"
+msgstr ""
+
+#: accounts/models.py:94
+msgid "GPA"
+msgstr "نمرەی گشتی"
+#: accounts/models.py:95
+msgid "Academic Awards"
+msgstr "خەڵاتەکانی ئەکادیمی"
+#: accounts/models.py:96 resume_builder/models.py:257
+msgid "Publications"
+msgstr "بڵاوکراوەکان"
+#: accounts/models.py:99 resume_builder/models.py:141
+msgid "Work Experience"
+msgstr "ئەزموونی کار"
+#: accounts/models.py:100
+msgid "Volunteer Experience"
+msgstr "ئەزموونی خۆبەخشانە"
+#: accounts/models.py:103 resume_builder/models.py:181
+msgid "Technical Skills"
+msgstr "لێهاتوویی تەکنیکی"
+#: accounts/models.py:104 resume_builder/models.py:182
+msgid "Language Skills"
+msgstr "لێهاتوویی زمان"
+#: accounts/models.py:107
+msgid "CV Document"
+msgstr ""
+
+#: accounts/models.py:108
+msgid "Academic Transcripts"
+msgstr ""
+
+#: accounts/models.py:109
+msgid "Certificates"
+msgstr ""
+
+#: accounts/models.py:118
+msgid "User Profile"
+msgstr ""
+
+#: accounts/models.py:119
+msgid "User Profiles"
+msgstr ""
+
+#: accounts/views.py:40
+msgid "Welcome! Your account has been created successfully."
+msgstr ""
+
+#: accounts/views.py:49
+msgid "Welcome back!"
+msgstr ""
+
+#: accounts/views.py:58
+msgid "You have been logged out successfully."
+msgstr ""
+
+#: accounts/views.py:133
+msgid "Your profile has been updated successfully."
+msgstr ""
+
+#: communications/models.py:12
+msgid "Initial Inquiry to Supervisor"
+msgstr ""
+
+#: communications/models.py:13
+msgid "Application Follow-up"
+msgstr ""
+
+#: communications/models.py:14
+msgid "Supervisor Introduction"
+msgstr ""
+
+#: communications/models.py:15
+msgid "Interview Request"
+msgstr ""
+
+#: communications/models.py:16
+msgid "Acceptance Response"
+msgstr ""
+
+#: communications/models.py:17
+msgid "Visa Inquiry"
+msgstr ""
+
+#: communications/models.py:18
+msgid "Scholarship Inquiry"
+msgstr ""
+
+#: communications/models.py:19
+msgid "Research Proposal Email"
+msgstr ""
+
+#: communications/models.py:20
+msgid "Recommendation Letter Request"
+msgstr ""
+
+#: communications/models.py:21
+msgid "General Inquiry"
+msgstr ""
+
+#: communications/models.py:25
+msgid "Very Formal"
+msgstr ""
+
+#: communications/models.py:26
+msgid "Formal"
+msgstr ""
+
+#: communications/models.py:27
+msgid "Semi-Formal"
+msgstr ""
+
+#: communications/models.py:28
+msgid "Informal"
+msgstr ""
+
+#: communications/models.py:31 resume_builder/models.py:26
+msgid "Template Name"
+msgstr ""
+
+#: communications/models.py:32 resume_builder/models.py:27
+msgid "Template Type"
+msgstr ""
+
+#: communications/models.py:33
+msgid "Formality Level"
+msgstr ""
+
+#: communications/models.py:34 resources/models.py:60
+#: resume_builder/models.py:58
+msgid "Target Country"
+msgstr ""
+
+#: communications/models.py:37
+msgid "Subject Line Template"
+msgstr ""
+
+#: communications/models.py:38
+msgid "Greeting Template"
+msgstr ""
+
+#: communications/models.py:39
+msgid "Email Body Template"
+msgstr ""
+
+#: communications/models.py:40
+msgid "Closing Template"
+msgstr ""
+
+#: communications/models.py:41
+msgid "Signature Template"
+msgstr ""
+
+#: communications/models.py:44
+msgid "Description/Usage Notes"
+msgstr ""
+
+#: communications/models.py:45
+msgid "Cultural Communication Notes"
+msgstr ""
+
+#: communications/models.py:46
+msgid "Template Variables"
+msgstr ""
+
+#: communications/models.py:48 communications/models.py:245
+#: destinations/models.py:43 destinations/models.py:99
+#: destinations/models.py:152 destinations/models.py:201 resources/models.py:22
+#: resume_builder/models.py:38
+msgid "Active"
+msgstr ""
+
+#: communications/models.py:56
+msgid "Email Template"
+msgstr ""
+
+#: communications/models.py:57 templates/accounts/dashboard.html:86
+#: templates/home.html:95
+msgid "Email Templates"
+msgstr ""
+
+#: communications/models.py:65
+msgid "Planning to Apply"
+msgstr ""
+
+#: communications/models.py:66
+msgid "Preparing Application"
+msgstr ""
+
+#: communications/models.py:67
+msgid "Application Submitted"
+msgstr ""
+
+#: communications/models.py:68
+msgid "Under Review"
+msgstr ""
+
+#: communications/models.py:69
+msgid "Interview Stage"
+msgstr ""
+
+#: communications/models.py:70
+msgid "Accepted"
+msgstr ""
+
+#: communications/models.py:71
+msgid "Rejected"
+msgstr ""
+
+#: communications/models.py:72
+msgid "Waitlisted"
+msgstr ""
+
+#: communications/models.py:73
+msgid "Deferred"
+msgstr ""
+
+#: communications/models.py:74
+msgid "Withdrawn"
+msgstr ""
+
+#: communications/models.py:78
+msgid "Low Priority"
+msgstr ""
+
+#: communications/models.py:79
+msgid "Medium Priority"
+msgstr ""
+
+#: communications/models.py:80
+msgid "High Priority"
+msgstr ""
+
+#: communications/models.py:81
+msgid "Very High Priority"
+msgstr ""
+
+#: communications/models.py:89
+msgid "Application Title"
+msgstr ""
+
+#: communications/models.py:90
+msgid "Application Status"
+msgstr ""
+
+#: communications/models.py:91
+msgid "Priority Level"
+msgstr ""
+
+#: communications/models.py:94 destinations/models.py:140
+#: destinations/models.py:192
+msgid "Application Deadline"
+msgstr ""
+
+#: communications/models.py:95
+msgid "Submission Date"
+msgstr ""
+
+#: communications/models.py:96
+msgid "Decision Date"
+msgstr ""
+
+#: communications/models.py:99
+msgid "Supervisor Name"
+msgstr ""
+
+#: communications/models.py:100
+msgid "Supervisor Email"
+msgstr ""
+
+#: communications/models.py:101
+msgid "Admission Contact"
+msgstr ""
+
+#: communications/models.py:102 destinations/models.py:88
+msgid "Admission Email"
+msgstr ""
+
+#: communications/models.py:105
+msgid "Research Area"
+msgstr ""
+
+#: communications/models.py:106
+msgid "Funding Status"
+msgstr ""
+
+#: communications/models.py:107
+msgid "Application Fee"
+msgstr ""
+
+#: communications/models.py:110 communications/models.py:208
+msgid "Notes"
+msgstr ""
+
+#: communications/models.py:111
+msgid "Progress Notes"
+msgstr ""
+
+#: communications/models.py:120
+msgid "Application Tracker"
+msgstr ""
+
+#: communications/models.py:121
+msgid "Application Trackers"
+msgstr ""
+
+#: communications/models.py:130 templates/accounts/dashboard.html:167
+msgid "CV/Resume"
+msgstr ""
+
+#: communications/models.py:131
+msgid "Cover Letter"
+msgstr ""
+
+#: communications/models.py:132
+msgid "Motivation Letter"
+msgstr ""
+
+#: communications/models.py:133
+msgid "Research Proposal"
+msgstr ""
+
+#: communications/models.py:134
+msgid "Academic Transcript"
+msgstr ""
+
+#: communications/models.py:135
+msgid "Diploma/Certificate"
+msgstr ""
+
+#: communications/models.py:136
+msgid "Recommendation Letter"
+msgstr ""
+
+#: communications/models.py:137
+msgid "Language Certificate"
+msgstr ""
+
+#: communications/models.py:138
+msgid "Passport Copy"
+msgstr ""
+
+#: communications/models.py:139
+msgid "Portfolio"
+msgstr ""
+
+#: communications/models.py:140
+msgid "Writing Sample"
+msgstr ""
+
+#: communications/models.py:141
+msgid "Test Scores"
+msgstr ""
+
+#: communications/models.py:142
+msgid "Other Document"
+msgstr ""
+
+#: communications/models.py:146
+msgid "Draft"
+msgstr ""
+
+#: communications/models.py:147
+msgid "Ready"
+msgstr ""
+
+#: communications/models.py:148
+msgid "Submitted"
+msgstr ""
+
+#: communications/models.py:149
+msgid "Needs Update"
+msgstr ""
+
+#: communications/models.py:154
+msgid "Document Type"
+msgstr ""
+
+#: communications/models.py:155
+msgid "Document Title"
+msgstr ""
+
+#: communications/models.py:156
+msgid "Document File"
+msgstr ""
+
+#: communications/models.py:158
+msgid "Status"
+msgstr "دۆخ"
+#: communications/models.py:159
+msgid "Version"
+msgstr ""
+
+#: communications/models.py:162 destinations/models.py:16
+#: destinations/models.py:200 resources/models.py:15
+#: resume_builder/models.py:30 resume_builder/models.py:122
+#: resume_builder/models.py:203 resume_builder/models.py:283
+msgid "Description"
+msgstr ""
+
+#: communications/models.py:163 templates/accounts/dashboard.html:126
+#: templates/destinations/list.html:211
+msgid "Deadline"
+msgstr "کاتی کۆتایی"
+#: communications/models.py:164
+msgid "Required Document"
+msgstr ""
+
+#: communications/models.py:173
+msgid "Application Document"
+msgstr ""
+
+#: communications/models.py:174
+msgid "Application Documents"
+msgstr ""
+
+#: communications/models.py:182
+msgid "Initial Inquiry"
+msgstr ""
+
+#: communications/models.py:183
+msgid "Follow-up"
+msgstr ""
+
+#: communications/models.py:184
+msgid "Application Related"
+msgstr ""
+
+#: communications/models.py:185
+msgid "Interview Related"
+msgstr ""
+
+#: communications/models.py:186
+msgid "Acceptance Related"
+msgstr ""
+
+#: communications/models.py:187
+msgid "Visa Related"
+msgstr ""
+
+#: communications/models.py:188 resume_builder/models.py:229
+#: resume_builder/models.py:273
+msgid "Other"
+msgstr ""
+
+#: communications/models.py:194
+msgid "Email Type"
+msgstr ""
+
+#: communications/models.py:198
+msgid "Recipient Email"
+msgstr ""
+
+#: communications/models.py:199
+msgid "Recipient Name"
+msgstr ""
+
+#: communications/models.py:200
+msgid "Subject"
+msgstr ""
+
+#: communications/models.py:201
+msgid "Email Body"
+msgstr ""
+
+#: communications/models.py:204
+msgid "Sent Date"
+msgstr ""
+
+#: communications/models.py:205
+msgid "Response Received"
+msgstr ""
+
+#: communications/models.py:206
+msgid "Response Date"
+msgstr ""
+
+#: communications/models.py:214
+msgid "Email Log"
+msgstr ""
+
+#: communications/models.py:215
+msgid "Email Logs"
+msgstr ""
+
+#: communications/models.py:224
+msgid "Email Communication"
+msgstr ""
+
+#: communications/models.py:225
+msgid "Interview"
+msgstr ""
+
+#: communications/models.py:226
+msgid "Meeting/Presentation"
+msgstr ""
+
+#: communications/models.py:227
+msgid "Phone Call"
+msgstr ""
+
+#: communications/models.py:228
+msgid "Networking Event"
+msgstr ""
+
+#: communications/models.py:229 destinations/models.py:193
+msgid "Application Process"
+msgstr ""
+
+#: communications/models.py:230
+msgid "Visa Interview"
+msgstr ""
+
+#: communications/models.py:231
+msgid "General Communication"
+msgstr ""
+
+#: communications/models.py:234
+msgid "Tip Title"
+msgstr ""
+
+#: communications/models.py:235
+msgid "Communication Context"
+msgstr ""
+
+#: communications/models.py:236
+msgid "Country/Region"
+msgstr ""
+
+#: communications/models.py:238
+msgid "Tip Content"
+msgstr ""
+
+#: communications/models.py:239
+msgid "Example"
+msgstr ""
+
+#: communications/models.py:242
+msgid "Kurdish Context Notes"
+msgstr ""
+
+#: communications/models.py:243
+msgid "Common Mistakes to Avoid"
+msgstr ""
+
+#: communications/models.py:246
+msgid "Display Priority"
+msgstr ""
+
+#: communications/models.py:255
+msgid "Communication Tip"
+msgstr ""
+
+#: communications/models.py:256
+msgid "Communication Tips"
+msgstr ""
+
+#: communications/views.py:93
+msgid "Application tracker created successfully!"
+msgstr ""
+
+#: communications/views.py:130
+msgid "Application tracker updated successfully!"
+msgstr ""
+
+#: destinations/models.py:9
+msgid "Country Name"
+msgstr ""
+
+#: destinations/models.py:12
+msgid "Country Code"
+msgstr ""
+
+#: destinations/models.py:15
+msgid "Flag"
+msgstr ""
+
+#: destinations/models.py:17
+msgid "Official Language"
+msgstr ""
+
+#: destinations/models.py:18 destinations/models.py:145
+#: destinations/models.py:184
+msgid "Currency"
+msgstr ""
+
+#: destinations/models.py:21
+msgid "Academic Year Start"
+msgstr ""
+
+#: destinations/models.py:22
+msgid "General Application Deadlines"
+msgstr ""
+
+#: destinations/models.py:25
+msgid "Average Tuition (USD)"
+msgstr ""
+
+#: destinations/models.py:26
+msgid "Average Living Cost (USD)"
+msgstr ""
+
+#: destinations/models.py:29
+msgid "Student Visa Type"
+msgstr ""
+
+#: destinations/models.py:30
+msgid "Visa Processing Time"
+msgstr ""
+
+#: destinations/models.py:31
+msgid "Work Permit Allowed for Students"
+msgstr ""
+
+#: destinations/models.py:32
+msgid "Post-Study Work Visa Available"
+msgstr ""
+
+#: destinations/models.py:35
+msgid "Kurdish Community Information"
+msgstr ""
+
+#: destinations/models.py:36
+msgid "Kurdish Organizations"
+msgstr ""
+
+#: destinations/models.py:39
+msgid "Application Difficulty (1-5)"
+msgstr ""
+
+#: destinations/models.py:40
+msgid "Living Quality (1-5)"
+msgstr ""
+
+#: destinations/models.py:41
+msgid "Study Quality (1-5)"
+msgstr ""
+
+#: destinations/models.py:51 resume_builder/models.py:112
+#: resume_builder/models.py:155
+msgid "Country"
+msgstr "وڵات"
+#: destinations/models.py:52 templates/base.html:149
+#: templates/destinations/list.html:26
+msgid "Countries"
+msgstr "وڵاتان"
+#: destinations/models.py:61
+msgid "Public University"
+msgstr ""
+
+#: destinations/models.py:62
+msgid "Private University"
+msgstr ""
+
+#: destinations/models.py:63
+msgid "Research Institution"
+msgstr ""
+
+#: destinations/models.py:64
+msgid "University of Applied Sciences"
+msgstr ""
+
+#: destinations/models.py:67
+msgid "University Name"
+msgstr "ناوی زانکۆ"
+#: destinations/models.py:69 resume_builder/models.py:111
+#: resume_builder/models.py:154
+msgid "City"
+msgstr "شار"
+#: destinations/models.py:72
+msgid "Official Website"
+msgstr ""
+
+#: destinations/models.py:73
+msgid "Logo"
+msgstr ""
+
+#: destinations/models.py:74
+msgid "University Type"
+msgstr ""
+
+#: destinations/models.py:75
+msgid "Established Year"
+msgstr ""
+
+#: destinations/models.py:78
+msgid "World Ranking"
+msgstr ""
+
+#: destinations/models.py:79
+msgid "National Ranking"
+msgstr ""
+
+#: destinations/models.py:80
+msgid "Student Population"
+msgstr ""
+
+#: destinations/models.py:81
+msgid "International Students"
+msgstr ""
+
+#: destinations/models.py:84
+msgid "Languages of Instruction"
+msgstr ""
+
+#: destinations/models.py:87
+msgid "International Office Email"
+msgstr ""
+
+#: destinations/models.py:91
+msgid "Kurdish Students Information"
+msgstr ""
+
+#: destinations/models.py:92
+msgid "Kurdish-Friendly Supervisors"
+msgstr ""
+
+#: destinations/models.py:95
+msgid "Academic Reputation (1-5)"
+msgstr ""
+
+#: destinations/models.py:96
+msgid "Research Opportunities (1-5)"
+msgstr ""
+
+#: destinations/models.py:97
+msgid "International Student Support (1-5)"
+msgstr ""
+
+#: destinations/models.py:107
+msgid "University"
+msgstr ""
+
+#: destinations/models.py:108 templates/base.html:150
+#: templates/destinations/list.html:32
+msgid "Universities"
+msgstr "زانکۆکان"
+#: destinations/models.py:120 destinations/views.py:240
+#: resume_builder/models.py:100
+msgid "Postdoctoral"
+msgstr "پاش دکتۆرا"
+#: destinations/models.py:121
+msgid "Professional Program"
+msgstr ""
+
+#: destinations/models.py:125
+msgid "Program Name"
+msgstr ""
+
+#: destinations/models.py:126
+msgid "Program Level"
+msgstr ""
+
+#: destinations/models.py:130
+msgid "Duration (months)"
+msgstr ""
+
+#: destinations/models.py:131
+msgid "Total Credits"
+msgstr ""
+
+#: destinations/models.py:132
+msgid "Language of Instruction"
+msgstr ""
+
+#: destinations/models.py:135
+msgid "Minimum GPA"
+msgstr ""
+
+#: destinations/models.py:136
+msgid "Language Requirements"
+msgstr ""
+
+#: destinations/models.py:137
+msgid "Other Requirements"
+msgstr ""
+
+#: destinations/models.py:141
+msgid "Program Start Date"
+msgstr ""
+
+#: destinations/models.py:144
+msgid "Tuition Fee"
+msgstr ""
+
+#: destinations/models.py:146
+msgid "Scholarships Available"
+msgstr ""
+
+#: destinations/models.py:149
+msgid "Program Description"
+msgstr ""
+
+#: destinations/models.py:150
+msgid "Career Prospects"
+msgstr ""
+
+#: destinations/models.py:160
+msgid "Study Program"
+msgstr ""
+
+#: destinations/models.py:161
+msgid "Study Programs"
+msgstr ""
+
+#: destinations/models.py:170
+msgid "Full Scholarship"
+msgstr ""
+
+#: destinations/models.py:171
+msgid "Partial Scholarship"
+msgstr ""
+
+#: destinations/models.py:172
+msgid "Tuition Only"
+msgstr ""
+
+#: destinations/models.py:173
+msgid "Living Expenses Only"
+msgstr ""
+
+#: destinations/models.py:174
+msgid "Research Grant"
+msgstr ""
+
+#: destinations/models.py:177
+msgid "Scholarship Name"
+msgstr ""
+
+#: destinations/models.py:178
+msgid "Provider/Organization"
+msgstr ""
+
+#: destinations/models.py:182
+msgid "Scholarship Type"
+msgstr ""
+
+#: destinations/models.py:183
+msgid "Amount"
+msgstr ""
+
+#: destinations/models.py:187
+msgid "Eligible Programs"
+msgstr ""
+
+#: destinations/models.py:188
+msgid "Eligibility Criteria"
+msgstr ""
+
+#: destinations/models.py:189
+msgid "Kurdish-Specific Scholarship"
+msgstr ""
+
+#: destinations/models.py:194
+msgid "Required Documents"
+msgstr ""
+
+#: destinations/models.py:197
+msgid "Website"
+msgstr ""
+
+#: destinations/models.py:198
+msgid "Contact Email"
+msgstr ""
+
+#: destinations/models.py:209 resume_builder/models.py:269
+msgid "Scholarship"
+msgstr ""
+
+#: destinations/models.py:210 templates/base.html:151
+#: templates/destinations/list.html:44
+msgid "Scholarships"
+msgstr "بورسەکان"
+#: destinations/views.py:228
+msgid "What is your current education level?"
+msgstr ""
+
+#: destinations/views.py:236
+msgid "What is your preferred study level?"
+msgstr ""
+
+#: destinations/views.py:244
+msgid "What is your field of study?"
+msgstr ""
+
+#: destinations/views.py:248
+msgid "Which region are you from?"
+msgstr ""
+
+#: resources/models.py:11
+msgid "Category Name"
+msgstr ""
+
+#: resources/models.py:16
+msgid "Icon Class"
+msgstr ""
+
+#: resources/models.py:17
+msgid "Category Color"
+msgstr ""
+
+#: resources/models.py:19
+msgid "Parent Category"
+msgstr ""
+
+#: resources/models.py:20 resume_builder/models.py:125
+#: resume_builder/models.py:165 resume_builder/models.py:206
+#: resume_builder/models.py:250 resume_builder/models.py:285
+msgid "Display Order"
+msgstr ""
+
+#: resources/models.py:29
+msgid "Resource Category"
+msgstr ""
+
+#: resources/models.py:30
+msgid "Resource Categories"
+msgstr ""
+
+#: resources/models.py:39
+msgid "Country Guide"
+msgstr ""
+
+#: resources/models.py:40
+msgid "University Guide"
+msgstr ""
+
+#: resources/models.py:41
+msgid "Process Guide"
+msgstr ""
+
+#: resources/models.py:42
+msgid "Visa Guide"
+msgstr ""
+
+#: resources/models.py:43
+msgid "Scholarship Guide"
+msgstr ""
+
+#: resources/models.py:44
+msgid "Career Guide"
+msgstr ""
+
+#: resources/models.py:45
+msgid "Language Guide"
+msgstr ""
+
+#: resources/models.py:46
+msgid "Cultural Guide"
+msgstr ""
+
+#: resources/models.py:47
+msgid "General Guide"
+msgstr ""
+
+#: resources/models.py:51 resume_builder/models.py:190
+msgid "Beginner"
+msgstr ""
+
+#: resources/models.py:52 resume_builder/models.py:191
+msgid "Intermediate"
+msgstr ""
+
+#: resources/models.py:53 resume_builder/models.py:192
+msgid "Advanced"
+msgstr ""
+
+#: resources/models.py:56
+msgid "Guide Title"
+msgstr ""
+
+#: resources/models.py:57
+msgid "Guide Type"
+msgstr ""
+
+#: resources/models.py:61
+msgid "Target University"
+msgstr ""
+
+#: resources/models.py:62
+msgid "Difficulty Level"
+msgstr ""
+
+#: resources/models.py:64
+msgid "Summary"
+msgstr ""
+
+#: resources/models.py:65
+msgid "Content"
+msgstr ""
+
+#: resources/models.py:66
+msgid "Steps"
+msgstr ""
+
+#: resources/models.py:68
+msgid "Author"
+msgstr ""
+
+#: resources/models.py:69
+msgid "Estimated Reading Time (minutes)"
+msgstr ""
+
+#: resources/models.py:70
+msgid "Last Updated"
+msgstr ""
+
+#: resources/models.py:72
+msgid "Views"
+msgstr ""
+
+#: resources/models.py:73
+msgid "Helpful Votes"
+msgstr ""
+
+#: resources/models.py:75
+msgid "URL Slug"
+msgstr ""
+
+#: resources/models.py:76
+msgid "Meta Description"
+msgstr ""
+
+#: resources/models.py:77 resume_builder/models.py:248
+msgid "Keywords"
+msgstr ""
+
+#: resources/models.py:79
+msgid "Featured Guide"
+msgstr ""
+
+#: resources/models.py:80
+msgid "Published"
+msgstr ""
+
+#: resources/models.py:87
+msgid "Guide"
+msgstr ""
+
+#: resources/models.py:88 templates/base.html:152
+msgid "Guides"
+msgstr ""
+
+#: resume_builder/models.py:11
+msgid "Academic CV"
+msgstr ""
+
+#: resume_builder/models.py:12
+msgid "Professional Resume"
+msgstr ""
+
+#: resume_builder/models.py:13
+msgid "Research-Focused CV"
+msgstr ""
+
+#: resume_builder/models.py:14
+msgid "Creative Portfolio"
+msgstr ""
+
+#: resume_builder/models.py:18
+msgid "US Style"
+msgstr ""
+
+#: resume_builder/models.py:19
+msgid "UK Style"
+msgstr ""
+
+#: resume_builder/models.py:20
+msgid "European Style"
+msgstr ""
+
+#: resume_builder/models.py:21
+msgid "Canadian Style"
+msgstr ""
+
+#: resume_builder/models.py:22
+msgid "Australian Style"
+msgstr ""
+
+#: resume_builder/models.py:23
+msgid "International Style"
+msgstr ""
+
+#: resume_builder/models.py:28
+msgid "Country Style"
+msgstr ""
+
+#: resume_builder/models.py:31
+msgid "Template File"
+msgstr ""
+
+#: resume_builder/models.py:32
+msgid "Preview Image"
+msgstr ""
+
+#: resume_builder/models.py:35
+msgid "Sections Order"
+msgstr ""
+
+#: resume_builder/models.py:36
+msgid "Formatting Guidelines"
+msgstr ""
+
+#: resume_builder/models.py:46
+msgid "CV Template"
+msgstr ""
+
+#: resume_builder/models.py:47
+msgid "CV Templates"
+msgstr ""
+
+#: resume_builder/models.py:57
+msgid "Resume Title"
+msgstr ""
+
+#: resume_builder/models.py:59
+msgid "Target Field"
+msgstr ""
+
+#: resume_builder/models.py:62
+msgid "Full Name"
+msgstr ""
+
+#: resume_builder/models.py:65
+msgid "Phone"
+msgstr ""
+
+#: resume_builder/models.py:66
+msgid "Address"
+msgstr "ناونیشان"
+#: resume_builder/models.py:67
+msgid "Website/Portfolio"
+msgstr ""
+
+#: resume_builder/models.py:68
+msgid "LinkedIn"
+msgstr ""
+
+#: resume_builder/models.py:71
+msgid "Professional Summary"
+msgstr ""
+
+#: resume_builder/models.py:72
+msgid "Career Objective"
+msgstr ""
+
+#: resume_builder/models.py:75
+msgid "Generated PDF"
+msgstr ""
+
+#: resume_builder/models.py:76
+msgid "Generated DOC"
+msgstr ""
+
+#: resume_builder/models.py:78
+msgid "Primary Resume"
+msgstr ""
+
+#: resume_builder/models.py:86
+msgid "Resume"
+msgstr ""
+
+#: resume_builder/models.py:87
+msgid "Resumes"
+msgstr ""
+
+#: resume_builder/models.py:95
+msgid "High School"
+msgstr ""
+
+#: resume_builder/models.py:96
+msgid "Diploma"
+msgstr "دیپلۆما"
+#: resume_builder/models.py:101 resume_builder/models.py:272
+msgid "Certificate"
+msgstr "بڕوانامە"
+#: resume_builder/models.py:106
+msgid "Degree Level"
+msgstr ""
+
+#: resume_builder/models.py:107
+msgid "Degree Title"
+msgstr ""
+
+#: resume_builder/models.py:110
+msgid "Institution Name"
+msgstr ""
+
+#: resume_builder/models.py:114 resume_builder/models.py:157
+msgid "Start Date"
+msgstr ""
+
+#: resume_builder/models.py:115 resume_builder/models.py:158
+msgid "End Date"
+msgstr ""
+
+#: resume_builder/models.py:116
+msgid "Currently Studying"
+msgstr ""
+
+#: resume_builder/models.py:118
+msgid "GPA/Grade"
+msgstr ""
+
+#: resume_builder/models.py:119
+msgid "Thesis Title"
+msgstr ""
+
+#: resume_builder/models.py:120
+msgid "Supervisor"
+msgstr ""
+
+#: resume_builder/models.py:123
+msgid "Achievements/Honors"
+msgstr ""
+
+#: resume_builder/models.py:131 resume_builder/models.py:132
+msgid "Education"
+msgstr "خوێندن"
+#: resume_builder/models.py:142
+msgid "Research Experience"
+msgstr ""
+
+#: resume_builder/models.py:143
+msgid "Internship"
+msgstr ""
+
+#: resume_builder/models.py:144
+msgid "Volunteer Work"
+msgstr ""
+
+#: resume_builder/models.py:145
+msgid "Teaching Experience"
+msgstr ""
+
+#: resume_builder/models.py:146
+msgid "Project Experience"
+msgstr ""
+
+#: resume_builder/models.py:151
+msgid "Experience Type"
+msgstr ""
+
+#: resume_builder/models.py:152
+msgid "Job Title/Position"
+msgstr ""
+
+#: resume_builder/models.py:153
+msgid "Organization/Company"
+msgstr ""
+
+#: resume_builder/models.py:159
+msgid "Current Position"
+msgstr ""
+
+#: resume_builder/models.py:161
+msgid "Job Description"
+msgstr ""
+
+#: resume_builder/models.py:162
+msgid "Key Achievements"
+msgstr ""
+
+#: resume_builder/models.py:163
+msgid "Skills Used"
+msgstr ""
+
+#: resume_builder/models.py:183
+msgid "Software Skills"
+msgstr ""
+
+#: resume_builder/models.py:184
+msgid "Research Skills"
+msgstr ""
+
+#: resume_builder/models.py:185
+msgid "Interpersonal Skills"
+msgstr ""
+
+#: resume_builder/models.py:186
+msgid "Other Skills"
+msgstr ""
+
+#: resume_builder/models.py:193
+msgid "Expert"
+msgstr ""
+
+#: resume_builder/models.py:194
+msgid "Native"
+msgstr ""
+
+#: resume_builder/models.py:199
+msgid "Skill Category"
+msgstr ""
+
+#: resume_builder/models.py:200
+msgid "Skill Name"
+msgstr ""
+
+#: resume_builder/models.py:201
+msgid "Proficiency Level"
+msgstr ""
+
+#: resume_builder/models.py:204
+msgid "Years of Experience"
+msgstr ""
+
+#: resume_builder/models.py:212
+msgid "Skill"
+msgstr ""
+
+#: resume_builder/models.py:222
+msgid "Journal Article"
+msgstr ""
+
+#: resume_builder/models.py:223
+msgid "Conference Paper"
+msgstr ""
+
+#: resume_builder/models.py:224
+msgid "Book"
+msgstr ""
+
+#: resume_builder/models.py:225
+msgid "Book Chapter"
+msgstr ""
+
+#: resume_builder/models.py:226
+msgid "Thesis"
+msgstr ""
+
+#: resume_builder/models.py:227
+msgid "Technical Report"
+msgstr ""
+
+#: resume_builder/models.py:228
+msgid "Patent"
+msgstr ""
+
+#: resume_builder/models.py:234
+msgid "Publication Type"
+msgstr ""
+
+#: resume_builder/models.py:235
+msgid "Title"
+msgstr ""
+
+#: resume_builder/models.py:236
+msgid "Authors"
+msgstr ""
+
+#: resume_builder/models.py:237
+msgid "Journal/Conference/Publisher"
+msgstr ""
+
+#: resume_builder/models.py:239
+msgid "Publication Date"
+msgstr ""
+
+#: resume_builder/models.py:240
+msgid "Volume"
+msgstr ""
+
+#: resume_builder/models.py:241
+msgid "Issue"
+msgstr ""
+
+#: resume_builder/models.py:242
+msgid "Pages"
+msgstr ""
+
+#: resume_builder/models.py:244
+msgid "DOI"
+msgstr ""
+
+#: resume_builder/models.py:245
+msgid "URL"
+msgstr ""
+
+#: resume_builder/models.py:247
+msgid "Abstract"
+msgstr ""
+
+#: resume_builder/models.py:256
+msgid "Publication"
+msgstr ""
+
+#: resume_builder/models.py:266
+msgid "Academic Award"
+msgstr ""
+
+#: resume_builder/models.py:267
+msgid "Research Award"
+msgstr ""
+
+#: resume_builder/models.py:268
+msgid "Professional Award"
+msgstr ""
+
+#: resume_builder/models.py:270
+msgid "Competition Award"
+msgstr ""
+
+#: resume_builder/models.py:271
+msgid "Honor/Recognition"
+msgstr ""
+
+#: resume_builder/models.py:278
+msgid "Award Type"
+msgstr ""
+
+#: resume_builder/models.py:279
+msgid "Award Title"
+msgstr ""
+
+#: resume_builder/models.py:280
+msgid "Issuing Organization"
+msgstr ""
+
+#: resume_builder/models.py:282
+msgid "Date Received"
+msgstr ""
+
+#: resume_builder/models.py:291
+msgid "Award"
+msgstr ""
+
+#: resume_builder/models.py:292
+msgid "Awards"
+msgstr ""
+
+#: resume_builder/views.py:40
+msgid "Resume created successfully!"
+msgstr ""
+
+#: resume_builder/views.py:56
+msgid "Resume updated successfully!"
+msgstr ""
+
+#: resume_builder/views.py:72
+msgid "Resume deleted successfully!"
+msgstr ""
+
+#: resume_builder/views.py:108
+msgid "PDF generation feature coming soon!"
+msgstr ""
+
+#: resume_builder/views.py:117
+msgid "DOC generation feature coming soon!"
+msgstr ""
+
+#: templates/accounts/dashboard.html:5 templates/base.html:93
+msgid "Dashboard"
+msgstr "پانێل"
+#: templates/accounts/dashboard.html:16
+msgid "Welcome back,"
+msgstr ""
+
+#: templates/accounts/dashboard.html:19
+msgid "Continue your journey towards higher education abroad."
+msgstr ""
+
+#: templates/accounts/dashboard.html:25
+msgid "Profile Complete"
+msgstr ""
+
+#: templates/accounts/dashboard.html:39
+msgid "Quick Actions"
+msgstr ""
+
+#: templates/accounts/dashboard.html:50
+msgid "Find Destination"
+msgstr ""
+
+#: templates/accounts/dashboard.html:51
+msgid "Take our quiz to find your perfect study destination"
+msgstr ""
+
+#: templates/accounts/dashboard.html:62
+msgid "Create Resume"
+msgstr ""
+
+#: templates/accounts/dashboard.html:63
+msgid "Build a professional CV tailored for international applications"
+msgstr ""
+
+#: templates/accounts/dashboard.html:74
+msgid "Track Application"
+msgstr ""
+
+#: templates/accounts/dashboard.html:75
+msgid "Add a new university application to track your progress"
+msgstr ""
+
+#: templates/accounts/dashboard.html:87
+msgid "Use professional email templates for university contacts"
+msgstr ""
+
+#: templates/accounts/dashboard.html:99
+msgid "Recent Applications"
+msgstr ""
+
+#: templates/accounts/dashboard.html:101
+msgid "View All"
+msgstr "هەموو ببینە"
+#: templates/accounts/dashboard.html:135
+msgid "No applications yet"
+msgstr ""
+
+#: templates/accounts/dashboard.html:136
+msgid "Start by adding your first university application to track."
+msgstr ""
+
+#: templates/accounts/dashboard.html:138
+msgid "Add Application"
+msgstr ""
+
+#: templates/accounts/dashboard.html:150
+msgid "Profile Status"
+msgstr ""
+
+#: templates/accounts/dashboard.html:159
+msgid "Academic Background"
+msgstr ""
+
+#: templates/accounts/dashboard.html:184
+msgid "Complete Profile"
+msgstr ""
+
+#: templates/accounts/dashboard.html:192
+msgid "Your Region"
+msgstr ""
+
+#: templates/accounts/dashboard.html:201
+msgid "Get region-specific guidance and support for your applications."
+msgstr ""
+
+#: templates/accounts/dashboard.html:214
+msgid "Recent Activity"
+msgstr ""
+
+#: templates/accounts/dashboard.html:225
+msgid "ago"
+msgstr "لەمەوپێش"
+#: templates/accounts/dashboard.html:232
+msgid "No recent activity"
+msgstr ""
+
+#: templates/accounts/dashboard.html:233
+msgid "Your activities will appear here as you use the platform."
+msgstr ""
+
+#: templates/accounts/login.html:6 templates/base.html:107
+msgid "Login"
+msgstr "چوونەژوورەوە"
+#: templates/accounts/login.html:22
+msgid "Welcome Back"
+msgstr "بەخێربگەڕێیتەوە"
+#: templates/accounts/login.html:23
+msgid "Sign in to continue your academic journey"
+msgstr "بچۆرەوە ناوەوە بۆ بەردەوامبوونی گەشتی ئەکادیمیت"
+#: templates/accounts/login.html:32
+msgid "Username"
+msgstr "ناوی بەکارهێنەر"
+#: templates/accounts/login.html:49
+msgid "Password"
+msgstr "وشەی نهێنی"
+#: templates/accounts/login.html:68
+msgid "Remember me"
+msgstr ""
+
+#: templates/accounts/login.html:75 templates/accounts/register.html:44
+msgid "Sign In"
+msgstr "چوونەژوورەوە"
+#: templates/accounts/login.html:88 templates/accounts/register.html:36
+msgid "or"
+msgstr ""
+
+#: templates/accounts/login.html:94
+msgid "Don't have an account?"
+msgstr ""
+
+#: templates/accounts/login.html:106
+msgid "Supporting Kurdish students from"
+msgstr ""
+
+#: templates/accounts/register.html:22
+msgid "Join ApplyHelp"
+msgstr ""
+
+#: templates/accounts/register.html:23
+msgid "Start your journey to higher education abroad"
+msgstr ""
+
+#: templates/accounts/register.html:42
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/accounts/register.html:54
+msgid "Supporting Kurdish students from all regions"
+msgstr "پشتگیری خوێندکارانی کورد لە هەموو هەرێمەکان"
+#: templates/base.html:8
+msgid "ApplyHelp - Kurdish Students Study Abroad"
+msgstr ""
+
+#: templates/base.html:9
+msgid ""
+"Help for Kurdish students from Rojhelat, Başûr, Bakûr, and Rojava to apply "
+"for MSc/PhD programs in Europe, Canada, USA, Australia, and New Zealand."
+msgstr ""
+
+#: templates/base.html:31 templates/base.html:143
+msgid "ApplyHelp"
+msgstr ""
+
+#: templates/base.html:42
+msgid "Home"
+msgstr "ماڵەوە"
+#: templates/base.html:47
+msgid "Destinations"
+msgstr "شوێنەکانی خوێندن"
+#: templates/base.html:52 templates/home.html:81
+msgid "Resume Builder"
+msgstr "درووستکردنی ژیان نامە"
+#: templates/base.html:57
+msgid "Communications"
+msgstr "پەیوەندیکردن"
+#: templates/base.html:62
+msgid "Resources"
+msgstr "سەرچاوەکان"
+#: templates/base.html:96
+msgid "Profile"
+msgstr "پرۆفایل"
+#: templates/base.html:100
+msgid "Logout"
+msgstr "چوونەدەرەوە"
+#: templates/base.html:112
+msgid "Register"
+msgstr "خۆتۆمارکردن"
+#: templates/base.html:144
+msgid ""
+"Supporting Kurdish students in their journey to higher education worldwide."
+msgstr ""
+
+#: templates/base.html:147
+msgid "Quick Links"
+msgstr ""
+
+#: templates/base.html:156
+msgid "Kurdish Regions"
+msgstr ""
+
+#: templates/base.html:168
+msgid "All rights reserved."
+msgstr ""
+
+#: templates/base.html:172
+msgid "Made with"
+msgstr ""
+
+#: templates/base.html:172
+msgid "for Kurdish students"
+msgstr ""
+
+#: templates/destinations/list.html:5
+msgid "Study Destinations"
+msgstr ""
+
+#: templates/destinations/list.html:13
+msgid "Find Your Perfect Study Destination"
+msgstr "شوێنی تەواوی خوێندنەکەت بدۆزەرەوە"
+#: templates/destinations/list.html:16
+msgid ""
+"Explore universities, programs, and scholarships across top study "
+"destinations worldwide."
+msgstr ""
+
+#: templates/destinations/list.html:38
+msgid "Programs"
+msgstr "بەرنامەکان"
+#: templates/destinations/list.html:53
+msgid "Top Study Destinations"
+msgstr ""
+
+#: templates/destinations/list.html:55
+msgid "View All Countries"
+msgstr ""
+
+#: templates/destinations/list.html:77
+msgid "Explore"
+msgstr ""
+
+#: templates/destinations/list.html:85
+msgid "No countries available yet."
+msgstr ""
+
+#: templates/destinations/list.html:94
+msgid "Featured Universities"
+msgstr ""
+
+#: templates/destinations/list.html:96
+msgid "View All Universities"
+msgstr ""
+
+#: templates/destinations/list.html:120
+msgid "World"
+msgstr ""
+
+#: templates/destinations/list.html:125
+msgid "View Details"
+msgstr "وردەکاریەکان ببینە"
+#: templates/destinations/list.html:132
+msgid "No universities available yet."
+msgstr ""
+
+#: templates/destinations/list.html:141
+msgid "Latest Programs"
+msgstr ""
+
+#: templates/destinations/list.html:143
+msgid "View All Programs"
+msgstr ""
+
+#: templates/destinations/list.html:164
+msgid "Learn More"
+msgstr "زیاتر بزانە"
+#: templates/destinations/list.html:172
+msgid "No programs available yet."
+msgstr ""
+
+#: templates/destinations/list.html:181
+msgid "Available Scholarships"
+msgstr ""
+
+#: templates/destinations/list.html:183
+msgid "View All Scholarships"
+msgstr ""
+
+#: templates/destinations/list.html:200
+msgid "Kurdish Specific"
+msgstr ""
+
+#: templates/destinations/list.html:219
+msgid "No scholarships available yet."
+msgstr ""
+
+#: templates/destinations/list.html:228
+msgid "Need Help Choosing?"
+msgstr ""
+
+#: templates/destinations/list.html:230
+msgid ""
+"Take our personalized quiz to find the best destination for your academic "
+"goals."
+msgstr ""
+
+#: templates/destinations/list.html:233 templates/home.html:250
+msgid "Take Destination Quiz"
+msgstr ""
+
+#: templates/home.html:5
+msgid "ApplyHelp - Supporting Kurdish Students Study Abroad"
+msgstr ""
+
+#: templates/home.html:16
+msgid "Your Journey to Higher Education Starts Here"
+msgstr "گەشتەکەت بۆ خوێندنی بەرز لێرەوە دەستپێدەکات"
+#: templates/home.html:19
+msgid ""
+"Supporting Kurdish students from all regions (Rojhelat, Başûr, Bakûr, and "
+"Rojava) to pursue MSc and PhD programs in Europe, Canada, USA, Australia, "
+"and New Zealand."
+msgstr ""
+
+#: templates/home.html:23
+msgid "Get Started"
+msgstr "دەستپێکردن"
+#: templates/home.html:26
+msgid "Find Your Destination"
+msgstr ""
+
+#: templates/home.html:36
+msgid "All Kurdish Regions"
+msgstr ""
+
+#: templates/home.html:54
+msgid "Everything You Need to Apply Successfully"
+msgstr ""
+
+#: templates/home.html:55
+msgid ""
+"Comprehensive tools and resources designed specifically for Kurdish students"
+msgstr ""
+
+#: templates/home.html:67
+msgid "Destination Selection"
+msgstr ""
+
+#: templates/home.html:68
+msgid ""
+"Smart matching system to find the perfect country and university based on "
+"your background and goals."
+msgstr ""
+
+#: templates/home.html:69
+msgid "Explore Destinations"
+msgstr ""
+
+#: templates/home.html:82
+msgid ""
+"Create professional CVs adapted to different country standards with Kurdish "
+"context consideration."
+msgstr ""
+
+#: templates/home.html:83
+msgid "Build Resume"
+msgstr ""
+
+#: templates/home.html:96
+msgid ""
+"Professional email templates for contacting supervisors, universities, and "
+"handling applications."
+msgstr ""
+
+#: templates/home.html:97
+msgid "View Templates"
+msgstr ""
+
+#: templates/home.html:109
+msgid "Guides & Resources"
+msgstr ""
+
+#: templates/home.html:110
+msgid ""
+"Comprehensive guides covering visa processes, cultural adaptation, and "
+"country-specific information."
+msgstr ""
+
+#: templates/home.html:111
+msgid "Browse Guides"
+msgstr ""
+
+#: templates/home.html:126
+msgid "Countries Covered"
+msgstr ""
+
+#: templates/home.html:132
+msgid "Universities Listed"
+msgstr ""
+
+#: templates/home.html:138
+msgid "Success Stories"
+msgstr ""
+
+#: templates/home.html:144
+msgid "Helpful Guides"
+msgstr ""
+
+#: templates/home.html:156
+msgid "Supporting All Kurdish Regions"
+msgstr ""
+
+#: templates/home.html:158
+msgid ""
+"We understand the unique challenges faced by Kurdish students from different "
+"regions and provide tailored support for each context."
+msgstr ""
+
+#: templates/home.html:169
+msgid "Eastern Kurdistan"
+msgstr ""
+
+#: templates/home.html:181
+msgid "Southern Kurdistan"
+msgstr ""
+
+#: templates/home.html:193
+msgid "Northern Kurdistan"
+msgstr ""
+
+#: templates/home.html:205
+msgid "Western Kurdistan"
+msgstr ""
+
+#: templates/home.html:215
+msgid "Tailored Support"
+msgstr ""
+
+#: templates/home.html:217
+msgid "Region-specific document requirements"
+msgstr ""
+
+#: templates/home.html:218
+msgid "Grade conversion systems"
+msgstr ""
+
+#: templates/home.html:219
+msgid "Language requirement guidance"
+msgstr ""
+
+#: templates/home.html:220
+msgid "Cultural context consideration"
+msgstr ""
+
+#: templates/home.html:221
+msgid "Visa process specific help"
+msgstr ""
+
+#: templates/home.html:235
+msgid "Ready to Start Your Journey?"
+msgstr ""
+
+#: templates/home.html:237
+msgid ""
+"Join thousands of Kurdish students who have successfully pursued their "
+"dreams of higher education abroad."
+msgstr ""
+
+#: templates/home.html:242
+msgid "Create Free Account"
+msgstr ""
+
+#: templates/home.html:246
+msgid "Go to Dashboard"
+msgstr ""

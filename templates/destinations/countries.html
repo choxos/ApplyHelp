@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Study Destinations" %} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="page-header text-center">
+                <h1 class="display-5 fw-bold text-primary mb-3">
+                    {% trans "Study Destinations Worldwide" %}
+                </h1>
+                <p class="lead text-muted">
+                    {% trans "Discover the best countries for your graduate studies with comprehensive information about education systems, costs, and opportunities." %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="search-filter-card card shadow-sm">
+                <div class="card-body">
+                    <form method="get" class="row g-3">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" name="search" class="form-control" 
+                                       placeholder="{% trans 'Search countries...' %}" 
+                                       value="{{ request.GET.search }}">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <select name="region" class="form-select">
+                                <option value="">{% trans "All Regions" %}</option>
+                                <option value="europe">{% trans "Europe" %}</option>
+                                <option value="north_america">{% trans "North America" %}</option>
+                                <option value="oceania">{% trans "Oceania" %}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-filter"></i> {% trans "Filter" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Countries Grid -->
+    <div class="row g-4">
+        {% for country in countries %}
+        <div class="col-lg-4 col-md-6">
+            <div class="country-card card h-100 shadow-sm">
+                <div class="card-header bg-white border-0 text-center pt-4">
+                    {% if country.flag_image %}
+                        <img src="{{ country.flag_image.url }}" alt="{{ country.name }}" class="country-flag mb-3">
+                    {% else %}
+                        <div class="flag-placeholder mb-3">
+                            <i class="fas fa-flag fa-3x text-muted"></i>
+                        </div>
+                    {% endif %}
+                    <h4 class="card-title">{{ country.name }}</h4>
+                    <p class="text-muted small">{{ country.official_language }}</p>
+                </div>
+                
+                <div class="card-body">
+                    <p class="card-text">{{ country.description|truncatewords:20 }}</p>
+                    
+                    <!-- Key Stats -->
+                    <div class="country-stats mb-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h6 class="text-success mb-1">{{ country.universities.count }}</h6>
+                                    <small class="text-muted">{% trans "Universities" %}</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h6 class="text-info mb-1">{{ country.scholarships.count }}</h6>
+                                    <small class="text-muted">{% trans "Scholarships" %}</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="rating">
+                                        {% for i in "12345"|make_list %}
+                                            {% if forloop.counter <= country.study_quality %}
+                                                <i class="fas fa-star text-warning"></i>
+                                            {% else %}
+                                                <i class="far fa-star text-muted"></i>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <small class="text-muted">{% trans "Quality" %}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cost Information -->
+                    {% if country.avg_tuition_usd %}
+                    <div class="cost-info mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">{% trans "Avg. Tuition" %}:</small>
+                            <span class="badge bg-primary">${{ country.avg_tuition_usd|floatformat:0 }}/{% trans "year" %}</span>
+                        </div>
+                        {% if country.avg_living_cost_usd %}
+                        <div class="d-flex justify-content-between align-items-center mt-1">
+                            <small class="text-muted">{% trans "Living Cost" %}:</small>
+                            <span class="badge bg-secondary">${{ country.avg_living_cost_usd|floatformat:0 }}/{% trans "year" %}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Kurdish Community Info -->
+                    {% if country.kurdish_population %}
+                    <div class="kurdish-info mb-3">
+                        <div class="alert alert-success alert-sm py-2">
+                            <i class="fas fa-users"></i>
+                            <small>{% trans "Kurdish Community Present" %}</small>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Difficulty Level -->
+                    <div class="difficulty-level mb-3">
+                        <small class="text-muted">{% trans "Application Difficulty" %}:</small>
+                        <div class="difficulty-bars">
+                            {% for i in "12345"|make_list %}
+                                <span class="difficulty-bar {% if forloop.counter <= country.application_difficulty %}active{% endif %}"></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer bg-white border-0 text-center pb-4">
+                    <a href="{% url 'destinations:country_detail' country.code %}" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> {% trans "Learn More" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="empty-state text-center py-5">
+                <i class="fas fa-globe-americas fa-4x text-muted mb-4"></i>
+                <h4 class="text-muted">{% trans "No countries found" %}</h4>
+                <p class="text-muted">{% trans "Try adjusting your search criteria or check back later." %}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if is_paginated %}
+    <div class="row mt-5">
+        <div class="col-12">
+            <nav aria-label="{% trans 'Countries pagination' %}">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?{% if request.GET.search %}search={{ request.GET.search }}&{% endif %}{% if request.GET.region %}region={{ request.GET.region }}&{% endif %}page=1">
+                                <i class="fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?{% if request.GET.search %}search={{ request.GET.search }}&{% endif %}{% if request.GET.region %}region={{ request.GET.region }}&{% endif %}page={{ page_obj.previous_page_number }}">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                        </li>
+                    {% endif %}
+                    
+                    <li class="page-item active">
+                        <span class="page-link">{{ page_obj.number }} {% trans "of" %} {{ page_obj.paginator.num_pages }}</span>
+                    </li>
+                    
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?{% if request.GET.search %}search={{ request.GET.search }}&{% endif %}{% if request.GET.region %}region={{ request.GET.region }}&{% endif %}page={{ page_obj.next_page_number }}">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?{% if request.GET.search %}search={{ request.GET.search }}&{% endif %}{% if request.GET.region %}region={{ request.GET.region }}&{% endif %}page={{ page_obj.paginator.num_pages }}">
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Call to Action -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="cta-card card bg-gradient-primary text-white">
+                <div class="card-body text-center py-5">
+                    <h3 class="fw-bold mb-3">{% trans "Need Help Choosing?" %}</h3>
+                    <p class="mb-4">
+                        {% trans "Take our personalized destination quiz to find the perfect match for your academic goals and background." %}
+                    </p>
+                    <a href="{% url 'destinations:quiz' %}" class="btn btn-light btn-lg">
+                        <i class="fas fa-compass"></i> {% trans "Take Quiz" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .country-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+    }
+    
+    .country-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    
+    .country-flag {
+        width: 80px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+    }
+    
+    .flag-placeholder {
+        width: 80px;
+        height: 60px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .country-stats .stat-item {
+        padding: 0.5rem 0;
+    }
+    
+    .cost-info {
+        background: #f8f9fa;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+    }
+    
+    .kurdish-info .alert-sm {
+        font-size: 0.875rem;
+        margin-bottom: 0;
+    }
+    
+    .difficulty-bars {
+        display: flex;
+        gap: 2px;
+        margin-top: 0.25rem;
+    }
+    
+    .difficulty-bar {
+        height: 4px;
+        width: 20px;
+        background-color: #e9ecef;
+        border-radius: 2px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .difficulty-bar.active {
+        background-color: #dc3545;
+    }
+    
+    .search-filter-card {
+        border: none;
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    }
+    
+    .cta-card {
+        background: linear-gradient(135deg, #007bff, #0056b3) !important;
+        border: none;
+    }
+    
+    .empty-state {
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .rating {
+        font-size: 0.875rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .country-flag {
+            width: 60px;
+            height: 45px;
+        }
+        
+        .flag-placeholder {
+            width: 60px;
+            height: 45px;
+        }
+        
+        .country-stats .stat-item h6 {
+            font-size: 1rem;
+        }
+        
+        .difficulty-bar {
+            width: 15px;
+        }
+    }
+</style>
+{% endblock %}

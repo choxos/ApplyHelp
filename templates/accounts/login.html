@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Login" %} - {{ block.super }}{% endblock %}
+
+{% block main_class %}{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-lg-5 col-md-7">
+                <div class="auth-card card shadow-lg border-0">
+                    <div class="card-body p-5">
+                        <!-- Header -->
+                        <div class="text-center mb-4">
+                            <div class="auth-logo mb-3">
+                                <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+                            </div>
+                            <h2 class="fw-bold">{% trans "Welcome Back" %}</h2>
+                            <p class="text-muted">{% trans "Sign in to continue your academic journey" %}</p>
+                        </div>
+
+                        <!-- Login Form -->
+                        <form method="post">
+                            {% csrf_token %}
+                            
+                            <div class="form-group mb-3">
+                                <label for="{{ form.username.id_for_label }}" class="form-label">
+                                    {% trans "Username" %}
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    {{ form.username }}
+                                </div>
+                                {% if form.username.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {{ form.username.errors|first }}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="{{ form.password.id_for_label }}" class="form-label">
+                                    {% trans "Password" %}
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                    {{ form.password }}
+                                </div>
+                                {% if form.password.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {{ form.password.errors|first }}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Remember Me -->
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    {% trans "Remember me" %}
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                                <i class="fas fa-sign-in-alt me-2"></i>
+                                {% trans "Sign In" %}
+                            </button>
+
+                            <!-- Form Errors -->
+                            {% if form.non_field_errors %}
+                                <div class="alert alert-danger">
+                                    {{ form.non_field_errors|first }}
+                                </div>
+                            {% endif %}
+                        </form>
+
+                        <!-- Divider -->
+                        <div class="auth-divider">
+                            <span>{% trans "or" %}</span>
+                        </div>
+
+                        <!-- Sign Up Link -->
+                        <div class="text-center">
+                            <p class="text-muted mb-0">
+                                {% trans "Don't have an account?" %}
+                                <a href="{% url 'accounts:register' %}" class="text-primary text-decoration-none fw-bold">
+                                    {% trans "Create Account" %}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Regional Support Info -->
+                    <div class="card-footer bg-light border-0 text-center p-4">
+                        <small class="text-muted">
+                            <i class="fas fa-heart text-danger"></i>
+                            {% trans "Supporting Kurdish students from" %}
+                        </small>
+                        <div class="regions-list mt-2">
+                            <small class="text-muted">
+                                {% trans "Rojhelat" %} • {% trans "Başûr" %} • {% trans "Bakûr" %} • {% trans "Rojava" %}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+    }
+    
+    .auth-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .auth-card {
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .auth-logo i {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    }
+    
+    .input-group-text {
+        border: 2px solid #e9ecef;
+        border-right: none;
+        background: #f8f9fa;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+    
+    .input-group .form-control {
+        border-left: none;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+    
+    .input-group .form-control:focus + .input-group-text,
+    .input-group-text:has(+ .form-control:focus) {
+        border-color: #667eea;
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .auth-divider {
+        text-align: center;
+        margin: 2rem 0;
+        position: relative;
+    }
+    
+    .auth-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #e9ecef;
+        z-index: 1;
+    }
+    
+    .auth-divider span {
+        background: white;
+        padding: 0 1rem;
+        color: #6c757d;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .form-check-input:checked {
+        background-color: #667eea;
+        border-color: #667eea;
+    }
+    
+    .form-check-input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+    }
+    
+    .regions-list {
+        font-size: 0.8rem;
+    }
+    
+    .alert-danger {
+        border: none;
+        border-radius: 0.5rem;
+        background-color: rgba(220, 53, 69, 0.1);
+        border-left: 4px solid #dc3545;
+        color: #721c24;
+    }
+    
+    /* RTL Support */
+    .rtl .input-group-text {
+        border-right: 2px solid #e9ecef;
+        border-left: none;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+    
+    .rtl .input-group .form-control {
+        border-right: none;
+        border-left: 2px solid #e9ecef;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+</style>
+{% endblock %}
